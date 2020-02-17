@@ -21,6 +21,10 @@ function App() {
   const tigerFG = e => {
     setTigerScore(tigerScore + 3)
   }
+  const scoreReset = e => {
+    setLionScore(0);
+    setTigerScore(0);
+  }
 
   return (
     <div className="container">
@@ -50,6 +54,9 @@ function App() {
         <div className="awayButtons">
           <button onClick={tigerTD}className="awayButtons__touchdown">Away Touchdown</button>
           <button onClick={tigerFG}className="awayButtons__fieldGoal">Away Field Goal</button>
+        </div>
+        <div className="awayButtons">
+          <button onClick={scoreReset}className="awayButtons__touchdown">Reset Score</button>
         </div>
 
       
