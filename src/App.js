@@ -8,6 +8,7 @@ function App() {
 
   const [lionScore, setLionScore] = useState(0);
   const [tigerScore, setTigerScore] = useState(0);
+
   const lionTD = e => {
     setLionScore(lionScore + 7);
   };
@@ -50,6 +51,8 @@ function App() {
           <button onClick={tigerTD}className="awayButtons__touchdown">Away Touchdown</button>
           <button onClick={tigerFG}className="awayButtons__fieldGoal">Away Field Goal</button>
         </div>
+
+      
       </section>
     </div>
   );
