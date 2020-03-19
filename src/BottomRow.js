@@ -1,7 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 
-const BottomRow = () => {
+export const BottomRow = () => {
+  const [fbQuarter, setFBQuarter] = useState(1);
+  const addQ = e =>{
+    setFBQuarter(fbQuarter + 1)
+  }
+
+  const nG = e =>{
+    setFBQuarter(1)
+  }
+
   return (
     <div className="bottomRow">
       <div className="down">
@@ -18,8 +27,12 @@ const BottomRow = () => {
       </div>
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
-        <div className="quarter__value">4</div>
+  <div className="quarter__value">{fbQuarter}</div>
       </div>
+      <div className="awayButtons">
+          <button onClick={addQ}>Quarter</button>
+          <button onClick={nG}>New Game</button>
+        </div>
     </div>
   );
 };
